@@ -1,20 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
     const projetos = [
-        {
-            nome: "Calculadora",
-            descricao: "Projeto simples feito com JavaScript"
-        },
-        {
-            nome: "Site Escolar",
-            descricao: "Desenvolvido com HTML e CSS"
-        },
-        {
-            nome: "Lista de Tarefas",
-            descricao: "Aplicação interativa com JS"
-        }
+        { nome: "Calculadora", descricao: "Projeto simples feito com JavaScript" },
+        { nome: "Site Escolar", descricao: "Desenvolvido com HTML e CSS" },
+        { nome: "Lista de Tarefas", descricao: "Aplicação interativa com JS" }
     ];
 
     const container = document.getElementById("lista-projetos");
+
+    container.innerHTML = "";
 
     projetos.forEach(projeto => {
         const card = document.createElement("div");

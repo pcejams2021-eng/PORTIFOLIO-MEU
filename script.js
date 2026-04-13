@@ -13,21 +13,15 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
     }
 
-    try {
-        container.innerHTML = "";
+    container.innerHTML = "";
 
-        projetos.forEach(p => {
-            container.innerHTML += `
-                <div class="card">
-                    <h3>${p.nome}</h3>
-                    <p>${p.descricao}</p>
-                </div>
-            `;
-        });
-
-    } catch (err) {
-        console.error("Erro ao renderizar projetos:", err);
-        container.innerHTML = "<p>Erro ao carregar projetos.</p>";
-    }
+    projetos.forEach(p => {
+        container.innerHTML += `
+            <div class="card">
+                <h3>${p.nome}</h3>
+                <p>${p.descricao}</p>
+            </div>
+        `;
+    });
 
 });

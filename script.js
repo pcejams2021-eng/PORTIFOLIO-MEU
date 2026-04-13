@@ -2,18 +2,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const projetos = [
         {
-            nome: "Calculadora",
-            descricao: "Calculadora funcional feita com HTML, CSS e JavaScript. Permite operações básicas como soma, subtração, multiplicação e divisão.",
+            nome: "Calculadora Web",
+            descricao: "Aplicação de calculadora desenvolvida com HTML, CSS e JavaScript. Permite operações matemáticas básicas com interface simples e responsiva.",
             link: "https://github.com/"
         },
         {
-            nome: "Site Escolar",
-            descricao: "Site institucional responsivo desenvolvido com HTML e CSS. Ideal para escolas ou projetos educacionais.",
+            nome: "Site Escolar Responsivo",
+            descricao: "Site institucional criado com HTML e CSS, focado em layout responsivo para diferentes dispositivos (celular, tablet e desktop).",
             link: "https://github.com/"
         },
         {
-            nome: "Lista de Tarefas",
-            descricao: "Aplicação interativa para organizar tarefas do dia a dia. Permite adicionar, marcar e remover itens.",
+            nome: "Lista de Tarefas (To Do List)",
+            descricao: "Aplicação interativa em JavaScript que permite adicionar, marcar e remover tarefas do dia a dia.",
             link: "https://github.com/"
         }
     ];
@@ -44,5 +44,4 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     container.appendChild(fragment);
-
 });

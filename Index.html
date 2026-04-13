@@ -3,37 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Portfólio</title>
+    <title>Givaldo Silva | Portfólio</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<header>
-    <h1>Meu Portfólio</h1>
-    <p>Desenvolvedor Web Iniciante</p>
+<header class="header">
+    <div class="container">
+        <h1 class="logo">Givaldo Silva</h1>
+
+        <nav class="nav">
+            <a href="#sobre">Sobre</a>
+            <a href="#projetos">Projetos</a>
+        </nav>
+    </div>
+
+    <div class="hero">
+        <h2>Desenvolvedor Web Iniciante</h2>
+        <p>HTML • CSS • JavaScript</p>
+    </div>
 </header>
 
-<main>
+<main class="container">
 
-    <section class="sobre">
+    <!-- SOBRE -->
+    <section id="sobre" class="section">
         <h2>Sobre mim</h2>
         <p>
-            Olá! Meu nome é Givaldo e estou aprendendo desenvolvimento web com HTML, CSS e JavaScript.
-            Este é meu portfólio com alguns projetos simples.
+            Olá! Meu nome é Givaldo Silva e estou iniciando como desenvolvedor web com HTML, CSS e JavaScript. Este portfólio reúne alguns dos meus primeiros projetos e evolução na área..
         </p>
     </section>
 
-    <section class="projetos">
+    <!-- PROJETOS -->
+    <section id="projetos" class="section">
         <h2>Meus Projetos</h2>
-        <div id="lista-projetos"></div>
+        <div id="lista-projetos" class="grid-projetos"></div>
     </section>
 
 </main>
 
-<footer>
-    <p>© 2026 - Meu Portfólio</p>
+<!-- RODAPÉ -->
+<footer class="footer">
+    <p>© 2026 - Givaldo Silva. Todos os direitos reservados.</p>
 </footer>
 
 <script src="script.js"></script>
+
 </body>
 </html>

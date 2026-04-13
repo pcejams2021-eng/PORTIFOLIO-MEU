@@ -9,28 +9,26 @@ document.addEventListener("DOMContentLoaded", () => {
     const container = document.getElementById("lista-projetos");
 
     if (!container) {
-        console.error("ERRO: #lista-projetos não encontrado no HTML");
+        console.error("Elemento #lista-projetos não encontrado");
         return;
     }
 
-    try {
-        container.innerHTML = "";
+    container.innerHTML = "";
 
-        projetos.forEach(projeto => {
-            const card = document.createElement("div");
-            card.classList.add("card");
+    const fragment = document.createDocumentFragment();
 
-            card.innerHTML = `
-                <h3>${projeto.nome}</h3>
-                <p>${projeto.descricao}</p>
-            `;
+    projetos.forEach(projeto => {
+        const card = document.createElement("div");
+        card.classList.add("card");
 
-            container.appendChild(card);
-        });
+        card.innerHTML = `
+            <h3>${projeto.nome}</h3>
+            <p>${projeto.descricao}</p>
+        `;
 
-    } catch (error) {
-        console.error("Erro ao renderizar projetos:", error);
-        container.innerHTML = "<p>Erro ao carregar os projetos.</p>";
-    }
+        fragment.appendChild(card);
+    });
+
+    container.appendChild(fragment);
 
 });

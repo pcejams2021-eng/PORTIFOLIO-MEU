@@ -1,31 +1,23 @@
-document.addEventListener("DOMContentLoaded", () => {
+const projetos = [
+    {
+        nome: "Calculadora",
+        descricao: "Projeto simples feito com JavaScript"
+    },
+    {
+        nome: "Site Escolar",
+        descricao: "Desenvolvido com HTML e CSS responsivo"
+    },
+    {
+        nome: "Lista de Tarefas",
+        descricao: "Aplicação interativa com JavaScript"
+    }
+];
 
-    const projetos = [
-        {
-            nome: "Calculadora Web",
-            descricao: "Projeto desenvolvido com HTML, CSS e JavaScript. Realiza operações matemáticas básicas com interface responsiva e manipulação do DOM.",
-            link: "https://github.com/Civaldo/calculadora"
-        },
-        {
-            nome: "Site Escolar Responsivo",
-            descricao: "Site institucional desenvolvido com HTML e CSS, utilizando Flexbox e Media Queries para responsividade em diferentes dispositivos.",
-            link: "https://github.com/Civaldo/site-escolar"
-        },
-        {
-            nome: "Lista de Tarefas (To Do List)",
-            descricao: "Aplicação interativa em JavaScript para gerenciamento de tarefas com adicionar, concluir e remover itens dinamicamente.",
-            link: "https://github.com/Civaldo/todo-list"
-        }
-    ];
+// pega o container
+const container = document.getElementById("lista-projetos");
 
-    const container = document.getElementById("lista-projetos");
-
-    if (!container) return;
-
-    container.innerHTML = "";
-
-    const fragment = document.createDocumentFragment();
-
+// proteção (boa prática profissional)
+if (container) {
     projetos.forEach(projeto => {
 
         const card = document.createElement("div");
@@ -34,12 +26,8 @@ document.addEventListener("DOMContentLoaded", () => {
         card.innerHTML = `
             <h3>${projeto.nome}</h3>
             <p>${projeto.descricao}</p>
-            <a href="${projeto.link}" target="_blank">🔗 Ver projeto</a>
+            <button class="btn">Ver mais</button>
         `;
 
-        fragment.appendChild(card);
+        container.appendChild(card);
     });
-
-    container.appendChild(fragment);
-
-});

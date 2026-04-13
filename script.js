@@ -13,21 +13,37 @@ const projetos = [
     }
 ];
 
-// pega o container
-const container = document.getElementById("lista-projetos");
+// função responsável por criar um card
+function criarCard(projeto) {
+    const card = document.createElement("div");
+    card.classList.add("card");
 
-// proteção (boa prática profissional)
-if (container) {
-    projetos.forEach(projeto => {
+    card.innerHTML = `
+        <h3>${projeto.nome}</h3>
+        <p>${projeto.descricao}</p>
+        <button class="btn">Ver mais</button>
+    `;
 
-        const card = document.createElement("div");
-        card.classList.add("card");
+    return card;
+}
 
-        card.innerHTML = `
-            <h3>${projeto.nome}</h3>
-            <p>${projeto.descricao}</p>
-            <button class="btn">Ver mais</button>
-        `;
+// função responsável por renderizar tudo
+function renderizarProjetos(lista) {
+    const container = document.getElementById("lista-projetos");
 
-        container.appendChild(card);
+    if (!container) {
+        console.error("Container #lista-projetos não encontrado");
+        return;
+    }
+
+    const fragment = document.createDocumentFragment();
+
+    lista.forEach(projeto => {
+        fragment.appendChild(criarCard(projeto));
     });
+
+    container.appendChild(fragment);
+}
+
+// inicialização
+renderizarProjetos(projetos);

@@ -4,17 +4,17 @@ document.addEventListener("DOMContentLoaded", () => {
         {
             nome: "Calculadora Web",
             descricao: "Aplicação de calculadora desenvolvida com HTML, CSS e JavaScript. Permite operações matemáticas básicas com interface simples e responsiva.",
-            link: "https://github.com/"
+            link: "https://github.com/seuusuario/calculadora"
         },
         {
             nome: "Site Escolar Responsivo",
-            descricao: "Site institucional criado com HTML e CSS, focado em layout responsivo para diferentes dispositivos (celular, tablet e desktop).",
-            link: "https://github.com/"
+            descricao: "Site institucional criado com HTML e CSS, com layout responsivo para celular, tablet e desktop.",
+            link: "https://github.com/seuusuario/site-escolar"
         },
         {
             nome: "Lista de Tarefas (To Do List)",
-            descricao: "Aplicação interativa em JavaScript que permite adicionar, marcar e remover tarefas do dia a dia.",
-            link: "https://github.com/"
+            descricao: "Aplicação interativa em JavaScript que permite adicionar, marcar como concluído e remover tarefas.",
+            link: "https://github.com/seuusuario/todo-list"
         }
     ];
 
@@ -44,4 +44,5 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     container.appendChild(fragment);
+
 });

@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
     }
 
-    // 🔥 Função refatorada (cria card)
+    // 🔥 Função que cria o card (refatoração)
     function criarCard(projeto) {
         const card = document.createElement("div");
         card.classList.add("card");
@@ -39,8 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             lista.forEach(projeto => {
-                const card = criarCard(projeto);
-                container.appendChild(card);
+                container.appendChild(criarCard(projeto));
             });
 
         } catch (error) {

@@ -8,12 +8,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const container = document.getElementById("lista-projetos");
 
+    // 🔴 Tratamento de erro: elemento não encontrado
     if (!container) {
-        console.error("Erro: container #lista-projetos não encontrado");
+        console.error("Erro: #lista-projetos não encontrado no HTML");
         return;
     }
 
-    // 🔥 Função separada (REFATORAÇÃO)
+    // 🔥 Função refatorada (cria card)
     function criarCard(projeto) {
         const card = document.createElement("div");
         card.classList.add("card");
@@ -26,12 +27,14 @@ document.addEventListener("DOMContentLoaded", () => {
         return card;
     }
 
+    // 🚀 Função principal de renderização (refatorada)
     function renderizarProjetos(lista) {
         try {
             container.innerHTML = "";
 
+            // 🔴 validação de dados
             if (!lista || lista.length === 0) {
-                container.innerHTML = "<p>Nenhum projeto disponível.</p>";
+                container.innerHTML = "<p>Nenhum projeto disponível no momento.</p>";
                 return;
             }
 
@@ -42,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         } catch (error) {
             console.error("Erro ao renderizar projetos:", error);
-            container.innerHTML = "<p>Erro ao carregar projetos.</p>";
+            container.innerHTML = "<p>Erro ao carregar os projetos.</p>";
         }
     }
 

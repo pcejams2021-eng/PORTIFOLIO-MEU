@@ -3,24 +3,27 @@ document.addEventListener("DOMContentLoaded", () => {
     const projetos = [
         {
             nome: "Calculadora",
-            descricao: "Projeto simples feito com JavaScript",
+            descricao: "Calculadora funcional feita com HTML, CSS e JavaScript. Permite operações básicas como soma, subtração, multiplicação e divisão.",
             link: "https://github.com/"
         },
         {
             nome: "Site Escolar",
-            descricao: "Projeto com HTML e CSS responsivo",
+            descricao: "Site institucional responsivo desenvolvido com HTML e CSS. Ideal para escolas ou projetos educacionais.",
             link: "https://github.com/"
         },
         {
             nome: "Lista de Tarefas",
-            descricao: "App interativo com JavaScript",
+            descricao: "Aplicação interativa para organizar tarefas do dia a dia. Permite adicionar, marcar e remover itens.",
             link: "https://github.com/"
         }
     ];
 
     const container = document.getElementById("lista-projetos");
 
-    if (!container) return;
+    if (!container) {
+        console.error("Elemento #lista-projetos não encontrado");
+        return;
+    }
 
     container.innerHTML = "";
 
@@ -34,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
         card.innerHTML = `
             <h3>${projeto.nome}</h3>
             <p>${projeto.descricao}</p>
-            <a href="${projeto.link}" target="_blank">Ver projeto</a>
+            <a href="${projeto.link}" target="_blank">🔗 Ver projeto</a>
         `;
 
         fragment.appendChild(card);

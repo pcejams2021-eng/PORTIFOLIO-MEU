@@ -8,16 +8,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const container = document.getElementById("lista-projetos");
 
-    // 🔴 Tratamento 1: verifica se o elemento existe no HTML
+    // 🔴 Verifica se o container existe
     if (!container) {
-        console.error("Erro: container de projetos não encontrado no HTML");
+        console.error("Erro: elemento #lista-projetos não encontrado no HTML");
         return;
     }
 
     try {
         container.innerHTML = "";
 
-        // 🔴 Tratamento 2: verifica se há projetos
+        // 🔴 Verifica se há projetos
         if (projetos.length === 0) {
             container.innerHTML = "<p>Nenhum projeto disponível no momento.</p>";
             return;
@@ -36,8 +36,8 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
     } catch (error) {
-        // 🔴 Tratamento 3: erro geral
-        console.error("Erro ao exibir projetos:", error);
+        // 🔴 Tratamento de erro geral
+        console.error("Erro ao renderizar os projetos:", error);
         container.innerHTML = "<p>Erro ao carregar os projetos.</p>";
     }
 

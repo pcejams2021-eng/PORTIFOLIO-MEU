@@ -8,47 +8,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const container = document.getElementById("lista-projetos");
 
-    // 🔴 Tratamento de erro: elemento não encontrado
     if (!container) {
-        console.error("Erro: #lista-projetos não encontrado no HTML");
+        console.error("ERRO: #lista-projetos não encontrado");
         return;
     }
 
-    // 🔥 Função que cria o card (refatoração)
-    function criarCard(projeto) {
-        const card = document.createElement("div");
-        card.classList.add("card");
+    try {
+        container.innerHTML = "";
 
-        card.innerHTML = `
-            <h3>${projeto.nome}</h3>
-            <p>${projeto.descricao}</p>
-        `;
+        projetos.forEach(p => {
+            container.innerHTML += `
+                <div class="card">
+                    <h3>${p.nome}</h3>
+                    <p>${p.descricao}</p>
+                </div>
+            `;
+        });
 
-        return card;
+    } catch (err) {
+        console.error("Erro ao renderizar projetos:", err);
+        container.innerHTML = "<p>Erro ao carregar projetos.</p>";
     }
-
-    // 🚀 Função principal de renderização (refatorada)
-    function renderizarProjetos(lista) {
-        try {
-            container.innerHTML = "";
-
-            // 🔴 validação de dados
-            if (!lista || lista.length === 0) {
-                container.innerHTML = "<p>Nenhum projeto disponível no momento.</p>";
-                return;
-            }
-
-            lista.forEach(projeto => {
-                container.appendChild(criarCard(projeto));
-            });
-
-        } catch (error) {
-            console.error("Erro ao renderizar projetos:", error);
-            container.innerHTML = "<p>Erro ao carregar os projetos.</p>";
-        }
-    }
-
-    // 🚀 execução principal
-    renderizarProjetos(projetos);
 
 });

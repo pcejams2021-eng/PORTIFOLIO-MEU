@@ -3,27 +3,24 @@ document.addEventListener("DOMContentLoaded", () => {
     const projetos = [
         {
             nome: "Calculadora Web",
-            descricao: "Projeto pessoal desenvolvido com HTML, CSS e JavaScript. Realiza operações matemáticas básicas com interface responsiva, foco em lógica e manipulação do DOM.",
-            link: "https://github.com/seuusuario/calculadora"
+            descricao: "Projeto desenvolvido com HTML, CSS e JavaScript. Realiza operações matemáticas básicas com interface responsiva e manipulação do DOM.",
+            link: "https://github.com/Civaldo/calculadora"
         },
         {
             nome: "Site Escolar Responsivo",
-            descricao: "Site institucional criado com HTML e CSS, utilizando Flexbox e Media Queries para garantir adaptação em dispositivos móveis e desktop.",
-            link: "https://github.com/seuusuario/site-escolar"
+            descricao: "Site institucional desenvolvido com HTML e CSS, utilizando Flexbox e Media Queries para responsividade em diferentes dispositivos.",
+            link: "https://github.com/Civaldo/site-escolar"
         },
         {
             nome: "Lista de Tarefas (To Do List)",
-            descricao: "Aplicação interativa em JavaScript para gerenciamento de tarefas, com funções de adicionar, marcar como concluída e remover itens dinamicamente.",
-            link: "https://github.com/seuusuario/todo-list"
+            descricao: "Aplicação interativa em JavaScript para gerenciamento de tarefas com adicionar, concluir e remover itens dinamicamente.",
+            link: "https://github.com/Civaldo/todo-list"
         }
     ];
 
     const container = document.getElementById("lista-projetos");
 
-    if (!container) {
-        console.error("Elemento #lista-projetos não encontrado");
-        return;
-    }
+    if (!container) return;
 
     container.innerHTML = "";
 

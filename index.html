@@ -1,55 +1,77 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Givaldo Silva | Portfólio</title>
-
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfólio | Civaldo</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-<header class="header">
-    <div class="container">
-        <h1 class="logo">Givaldo Silva</h1>
+  <!-- HERO / BANNER -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>👨‍💻 Givaldo José da Silva</h1>
+      <h2>Desenvolvedor Front-End</h2>
+      <p>Criando interfaces modernas, responsivas e experiências digitais de alto impacto.</p>
 
-        <nav class="nav">
-            <a href="#sobre">Sobre</a>
-            <a href="#projetos">Projetos</a>
-        </nav>
+      <div class="hero-buttons">
+        <a href="#projetos" class="btn">Ver Projetos</a>
+        <a href="#contato" class="btn outline">Contato</a>
+      </div>
     </div>
+  </header>
 
-    <div class="hero">
-        <h2>Desenvolvedor Web Iniciante</h2>
-        <p>HTML • CSS • JavaScript</p>
+  <!-- SOBRE -->
+  <section class="section">
+    <h2>Sobre mim</h2>
+    <p>
+      Sou desenvolvedor Front-End focado na criação de interfaces modernas, responsivas e funcionais.
+      Trabalho com HTML, CSS, JavaScript e estou evoluindo constantemente na área de tecnologia.
+    </p>
+  </section>
+
+  <!-- PROJETOS -->
+  <section id="projetos" class="section dark">
+    <h2>Projetos</h2>
+
+    <div class="grid">
+
+      <div class="card">
+        <h3>Portfólio Pessoal</h3>
+        <p>Site moderno desenvolvido com HTML, CSS e JavaScript.</p>
+        <span>HTML • CSS • JS</span>
+      </div>
+
+      <div class="card">
+        <h3>Landing Page</h3>
+        <p>Página responsiva para apresentação de serviços.</p>
+        <span>HTML • CSS</span>
+      </div>
+
+      <div class="card">
+        <h3>Projeto JS</h3>
+        <p>Aplicação interativa com JavaScript puro.</p>
+        <span>JavaScript</span>
+      </div>
+
     </div>
-</header>
+  </section>
 
-<main class="container">
+  <!-- CONTATO -->
+  <section id="contato" class="section">
+    <h2>Contato</h2>
 
-    <!-- SOBRE -->
-    <section id="sobre" class="section">
-        <h2>Sobre mim</h2>
-        <p>
-            Olá! Meu nome é Givaldo Silva e estou iniciando como desenvolvedor web com HTML, CSS e JavaScript. Este portfólio reúne alguns dos meus primeiros projetos e evolução na área..
-        </p>
-    </section>
+    <p>Email: seuemail@gmail.com</p>
+    <p>GitHub: github.com/pcejams2021-eng</p>
+    <p>Portfólio: https://portifolio-meu.vercel.app</p>
+  </section>
 
-    <!-- PROJETOS -->
-    <section id="projetos" class="section">
-        <h2>Meus Projetos</h2>
-        <div id="lista-projetos" class="grid-projetos"></div>
-    </section>
-
-</main>
-
-<!-- RODAPÉ -->
-<footer class="footer">
-    <p>© 2026 - Givaldo Silva. Todos os direitos reservados.</p>
-</footer>
-
-<script src="script.js"></script>
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 - Givaldo José da Silva | Todos os direitos reservados</p>
+  </footer>
 
 </body>
 </html>
